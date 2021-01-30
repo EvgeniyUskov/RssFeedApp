@@ -9,13 +9,23 @@ import UIKit
 
 //MARK: Protocols
 public protocol SettingsRouterProtocol {
-    
+    func navigateToSourceDetails(with viewModel: SourceViewModel?)
 }
 
-public class SettingsRouter: SettingsRouterProtocol {
-    weak var viewController: SettingsViewControllerRoutingProtocol?
+public class SettingsRouter {
+    weak var viewController: (SettingsViewControllerRoutingProtocol & SettingsUpdatingDelegate)?
     
-    public init (viewController: SettingsViewControllerRoutingProtocol) {
+    public init (viewController: SettingsViewControllerRoutingProtocol & SettingsUpdatingDelegate) {
         self.viewController = viewController
     }
+}
+
+extension SettingsRouter: SettingsRouterProtocol {
+    public func navigateToSourceDetails(with viewModel: SourceViewModel?) {
+        guard let viewController = viewController else { return }
+        let sourceViewController = SourceBuilder().build(with: viewModel, settingsUpdateDelegate: viewController )
+        viewController.showDetails(with: sourceViewController)
+    }
+    
+
 }

@@ -12,27 +12,56 @@ enum Constants {
     enum Colors {
         static let backgroundColor = UIColor(named: "BgColor")
         static let textColor = UIColor(named: "TextColor")
+        static let viewedColor = UIColor(named: "ViewedColor")
+        
+        static let messageTextColor = UIColor.lightGray
+        
+        static let dialogBackgroundColor = UIColor.lightGray
+    }
+    enum Fonts {
+        static let messageTitleFont = UIFont.systemFont(ofSize: 13, weight: .regular)
+        static let messageSubtitleFont = UIFont.systemFont(ofSize: 10, weight: .light)
+        
+        static let titleListFont = UIFont.systemFont(ofSize: 13, weight: .semibold)
+        static let dateListFont = UIFont.systemFont(ofSize: 10, weight: .light)
+        
+        static let titleDetailsFont = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        static let dateDetailsFont = UIFont.systemFont(ofSize: 15, weight: .light)
+        static let textDetailsFont = UIFont.systemFont(ofSize: 15, weight: .light)
     }
     
     enum Ids {
         static let newsCellReuseId = "newsCell"
-        static let collectionHeaderId = "collectionHeader"
-        static let infoCellReuseId = "infoCell"
+        static let settingsCellReuseId = "settingsCell"
         static let trackCellReuseId = "trackCell"
         static let historyCellReuseId = "historyCell"
     }
     
     enum Urls {
-        static let tracksUrl = "https://itunes.apple.com/search?term="
-        static let tracksUrlSuffix = "&limit=25"
-        static let albumsUrl = "https://itunes.apple.com/lookup?id="
-        static let albumsUrlSuffix = "&entity=album"
     }
     
     enum Stuff {
-        static let searchPlaceholderText = "Artist"
-        static let headerText = "Albums"
-        static let tracksHeaderText = "Tracks:"
-        static let dragDownImage = UIImage(named: "Drag Down")
+        static let noNewsTitleMessage = "Нет новостей"
+        static let noNewsSubtitleMessage = "Ваша лента пуста"
+        
+        static let noSourcesTitleMessage = "Нет источников"
+        static let noSourcesSubtitleMessage = "Добавьте источники для получения новостей"
+        
+        static let addNewTitleDialogText = "Новый Источник"
+        static let editTitleDialogText = "Редактирование"
+        
+        static let rightBarButtonItemText = "Назад"
+        static let saveButtonText = "Добавить"
+        
+        static let isActiveText = "Активный"
+        static let sourceTitleText = "Имя:"
+        static let urlTitleText = "URL:"
+        
+        static let titlePlaceholderText = "Название"
+        static let urlPlaceholderText = "https://"
+        
+        static let wrongUrl = "Введите корректный URL адрес"
+        static let wrongRss = "По этим адресам нет RSS рассылки"
+            static let modelName = "NewsSources"
     }
 }

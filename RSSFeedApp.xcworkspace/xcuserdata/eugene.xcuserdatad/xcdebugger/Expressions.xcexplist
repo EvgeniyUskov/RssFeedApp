@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SourceStorageManager.createSource():StorageManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SettingsViewController.loadSources():SettingsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ListViewController.reusableCell():ListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.tableView.dequeueReusableCell(withIdentifier: Constants.Ids.newsCellReuseId) as! NewsCell">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in NetworkManager.fetchFeed(forUrls:completion:):NetworkManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SettingsBuilder.build():SettingsBuilder.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SourceView.fillSource():SourceView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SourceViewController.saveData():SourceViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "presenter">
+            </PersistentString>
+            <PersistentString
+               value = "viewModel">
+            </PersistentString>
+            <PersistentString
+               value = "interactor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SourceInteractor.saveSource(with:):SourceInteractor.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "storageManager">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SourcePresenter.saveSource(with:):SourcePresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "interactor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in SourceStorageManager.loadSources(sources:completionHandler:):StorageManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self?.context.fetch(RssSource.fetchRequest()) as! [RssSource]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SourceStorageManager.addSource(with:):StorageManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "source.title">
+            </PersistentString>
+            <PersistentString
+               value = "source.url">
+            </PersistentString>
+            <PersistentString
+               value = "source.checked">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in NetworkManager.fetchFeed(forUrls:completion:):NetworkManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ListInteractor.fetchFeed():ListInteractor.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "feedUrls">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SettingsViewController.showAddSourceView():SettingsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "router">
+            </PersistentString>
+            <PersistentString
+               value = "interactor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SettingsInteractor.loadSources():SettingsInteractor.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

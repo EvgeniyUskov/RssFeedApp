@@ -11,11 +11,11 @@ public class ListBuilder {
     public func build() -> ListViewController {
         let listViewController = ListViewController()
         
-        let networkManager = NetworkManager()
         let storageManager = SourceStorageManager()
+        let networkManager = NetworkManager()
         
         let presenter = ListPresenter(viewController: listViewController)
-        let interactor = ListInteractor(presenter: presenter, networkManager: networkManager, storageManager: storageManager)
+        let interactor = ListInteractor(presenter: presenter, storageManager: storageManager, networkManager: networkManager)
         let router = ListRouter(viewController: listViewController)
         
         listViewController.presenter = presenter

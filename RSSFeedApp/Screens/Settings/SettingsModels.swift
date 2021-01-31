@@ -11,7 +11,7 @@ public struct SettingsViewModel {
     var sources: [SourceViewModel]
 }
 
-public class SourceViewModel {
+public struct SourceViewModel {
     var source: RssSource
     
     var url: String?

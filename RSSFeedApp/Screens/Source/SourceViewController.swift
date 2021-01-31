@@ -42,6 +42,10 @@ public class SourceViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        if let viewModel = viewModel {
+//            configure(with: viewModel)
+            sourceView.configure(with: viewModel)
+        }
     }
 }
 
@@ -75,4 +79,10 @@ extension SourceViewController {
         view.addSubview(sourceView)
         sourceView.edgesToSuperview()
     }
+    
+//    private func configure(with viewModel: SourceViewModel) {
+//        sourceView.titleTextField.text = viewModel.title
+//        sourceView.urlTextField.text = viewModel.url
+//        sourceView.switcher.isOn = viewModel.checked
+//    }
 }

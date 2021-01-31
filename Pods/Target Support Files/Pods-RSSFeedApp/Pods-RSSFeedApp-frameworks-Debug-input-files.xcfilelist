@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-RSSFeedApp/Pods-RSSFeedApp-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework
+${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework
 ${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework

@@ -9,7 +9,7 @@ target 'RSSFeedApp' do
 
 	pod 'FeedKit'
 	pod 'TinyConstraints'
-	
+	pod 'SwipeCellKit'
 
   target 'RSSFeedAppTests' do
     inherit! :search_paths

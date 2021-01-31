@@ -151,9 +151,11 @@ class SourceView: UIView {
         errorLabel.isHidden = true
         if viewModel.url == nil {
             titleLabel.text = Constants.Stuff.addNewTitleDialogText
+            saveButton.setTitle(Constants.Stuff.saveButtonText, for: .normal)
         }
         else {
             titleLabel.text = Constants.Stuff.editTitleDialogText
+            saveButton.setTitle(Constants.Stuff.editButtonText, for: .normal)
         }
         
         titleTextField.text = viewModel.title

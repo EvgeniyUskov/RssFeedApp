@@ -16,10 +16,15 @@ public protocol SettingsViewControllerRoutingProtocol: AnyObject {
     func showDetails(with viewController: SourceViewController)
 }
 
+public protocol SettingsTableActionDelegate {
+    func deleteItem(at indexPath: IndexPath)
+}
+
 //MARK: SettingsViewController
-public class SettingsViewController: UITableViewController {
+public class SettingsViewController: SwipeTableViewController {
     
     //MARK: Views
+    let searchController = UISearchController(searchResultsController: nil)
     
     //MARK: Properties
     var presenter: SettingsPresenterProtocol?
@@ -28,16 +33,34 @@ public class SettingsViewController: UITableViewController {
     
     var viewModel = SettingsViewModel(sources: [])
     
+    private var timer : Timer?
+    
     //MARK: View lifecycle
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
+        setupSearchBar()
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadSources()
+    }
+    
+    public override func updateModel(at indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+        presenter?.deleteData(viewModel: self.viewModel.sources[indexPath.row], completionHandler: {
+            [weak self] in
+            self?.viewModel.sources.remove(at: indexPath.row)
+            DispatchQueue.main.async {
+                [weak self] in
+                    
+                self?.tableView.reloadData()
+            }
+        })
     }
 }
 
@@ -62,8 +85,9 @@ extension SettingsViewController {
         switchView.tag = indexPath.row // for detect which row switch Changed
         switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
         
-        let cell = reusableCell(forIndexPath: indexPath)
-        cell.configure(with: viewModel.sources[indexPath.row])
+        let cell = super.tableView(tableView, cellForRowAt: indexPath) as! SourceCell
+//        reusableCell(forIndexPath: indexPath)
+        cell.configure(with: self.viewModel.sources[indexPath.row])
         switchView.setOn(viewModel.sources[indexPath.row].checked, animated: true)
         cell.accessoryView = switchView
         return cell
@@ -88,9 +112,7 @@ extension SettingsViewController {
 extension SettingsViewController: SettingsViewControllerProtocol {
     public func displayData(with sources: [SourceViewModel]) {
         self.viewModel.sources = sources
-        DispatchQueue.main.async {
             self.tableView.reloadData()
-        }
     }
 }
 
@@ -104,6 +126,15 @@ extension SettingsViewController: SettingsViewControllerRoutingProtocol {
 extension SettingsViewController: SettingsUpdatingDelegate {
     public func didAddNewSource() {
         loadSources()
+    }
+}
+
+extension SettingsViewController: UISearchBarDelegate {
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchTerm: String) {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
+            self.interactor?.showSources(with: searchTerm)
+        })
     }
 }
 
@@ -143,6 +174,15 @@ extension SettingsViewController {
     
     private func setupTableView() {
         tableView.register(SourceCell.self, forCellReuseIdentifier: Constants.Ids.settingsCellReuseId)
+    }
+    
+    private func setupSearchBar() {
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = Constants.Stuff.sourcesPlaceHolder
+        UIHelper.setupSearchBarUI(searchBar: searchController.searchBar)
     }
 }
 

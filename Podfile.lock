@@ -1,20 +1,24 @@
 PODS:
   - FeedKit (9.1.2)
+  - SwipeCellKit (2.7.1)
   - TinyConstraints (4.0.1)
 
 DEPENDENCIES:
   - FeedKit
+  - SwipeCellKit
   - TinyConstraints
 
 SPEC REPOS:
   trunk:
     - FeedKit
+    - SwipeCellKit
     - TinyConstraints
 
 SPEC CHECKSUMS:
   FeedKit: 71653273ab08e618cd6fd1301ca08fc02dca6a9e
+  SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 07bbefef04fe43b0a6c4b1bdc5b868792d67c216
+PODFILE CHECKSUM: b5c7e61ff9e4a88d9aee6e2524a2a05e9c660114
 
 COCOAPODS: 1.10.0

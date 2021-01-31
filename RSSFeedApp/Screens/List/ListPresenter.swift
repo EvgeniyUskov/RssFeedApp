@@ -17,6 +17,7 @@ public protocol ListPresenterProtocol: AnyObject {
 public class ListPresenter {
     //MARK: Properties
     weak var viewController: ListViewControllerProtocol?
+    private var alertPresented = false
     
     //MARK: Init
     public init(viewController: ListViewControllerProtocol) {
@@ -27,6 +28,7 @@ public class ListPresenter {
 
 //MARK: ListPresenterProtocol Implementation
 extension ListPresenter: ListPresenterProtocol {
+    
     public func presentData(with feedItems: [RSSFeedItem]) {
         var news = [NewsViewModel]()
         
@@ -37,6 +39,9 @@ extension ListPresenter: ListPresenterProtocol {
     }
     
     public func presentAlert(alert: UIAlertController) {
-        viewController?.displayAlert(alert: alert)
+        if !alertPresented {
+            viewController?.displayAlert(alert: alert)
+            alertPresented = true
+        }
     }
 }

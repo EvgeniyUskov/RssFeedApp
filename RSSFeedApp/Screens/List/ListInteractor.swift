@@ -34,10 +34,9 @@ public class ListInteractor {
 //MARK: ListInteractorProtocol implementation
 extension ListInteractor: ListInteractorProtocol {
     public func fetchFeed() {
-        storageManager?.loadSources(sources: .activeSources ,completionHandler: {
+        storageManager?.loadSources(sources: .activeSources, searchTerm: nil ,completionHandler: {
             [weak self]
             sources in
-            
             self?.feedUrls = Set(sources.compactMap {
                 URL(string: $0.url ?? "")
             })

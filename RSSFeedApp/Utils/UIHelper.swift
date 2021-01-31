@@ -30,4 +30,10 @@ public class UIHelper {
         navigationController.navigationBar.largeTitleTextAttributes = [.foregroundColor: textColor]
     }
 
+    public static func setupSearchBarUI(searchBar: UISearchBar) {
+        searchBar.barTintColor = Constants.Colors.backgroundColor
+        searchBar.tintColor = Constants.Colors.textColor
+        searchBar.textField?.textColor = Constants.Colors.textColor
+        searchBar.searchBarStyle = .minimal
+    }
 }

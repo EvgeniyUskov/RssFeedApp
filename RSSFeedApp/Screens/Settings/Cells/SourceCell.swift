@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class SourceCell: UITableViewCell {
+class SourceCell: SwipeTableViewCell {
 
     //MARK: Properties
     lazy var titleLabel = UILabel.makeNewsTitleLabel()
@@ -37,12 +38,12 @@ class SourceCell: UITableViewCell {
         backgroundColor = Constants.Colors.backgroundColor
         selectionStyle = .none
         addSubview(globalStackView)
-        
+
         NSLayoutConstraint.activate([
             globalStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             globalStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 10),
             
-            globalStackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 20),
+//            globalStackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 20),
             globalStackView.heightAnchor.constraint(equalToConstant: 64),
                                         
            // titleLabel.width(to: stackView, multiplier: 0.95)
@@ -50,8 +51,8 @@ class SourceCell: UITableViewCell {
     }
     
     public func configure(with viewModel: SourceViewModel) {
-        titleLabel.text = viewModel.title
-        urlLabel.text = viewModel.url
+        titleLabel.text = viewModel.source.title//TODO: delete source
+        urlLabel.text = viewModel.source.url
     }
 
     public func markAsViewed() {

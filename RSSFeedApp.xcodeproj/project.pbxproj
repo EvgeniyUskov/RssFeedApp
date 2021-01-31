@@ -43,6 +43,8 @@
 		449B873725C27D5A00E0F27F /* UINavigationController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B873625C27D5A00E0F27F /* UINavigationController + Extension.swift */; };
 		449B873C25C29C1200E0F27F /* SourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B873B25C29C1200E0F27F /* SourceCell.swift */; };
 		44B4FFD025C4250B00F0D1CD /* ThreadsafeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4FFCF25C4250B00F0D1CD /* ThreadsafeArray.swift */; };
+		44B4FFD825C561E400F0D1CD /* UISearchBar + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4FFD725C561E400F0D1CD /* UISearchBar + Extension.swift */; };
+		44B4FFE625C56E6000F0D1CD /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4FFE525C56E6000F0D1CD /* SwipeTableViewController.swift */; };
 		44D41BE525C2BC1300EB6487 /* SourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D41BE425C2BC1300EB6487 /* SourceView.swift */; };
 		44D41BEB25C2FA1500EB6487 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D41BEA25C2FA1500EB6487 /* SourceViewController.swift */; };
 		44D41BF325C2FA7800EB6487 /* SourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D41BF225C2FA7800EB6487 /* SourceBuilder.swift */; };
@@ -123,6 +125,8 @@
 		449B873625C27D5A00E0F27F /* UINavigationController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController + Extension.swift"; sourceTree = "<group>"; };
 		449B873B25C29C1200E0F27F /* SourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCell.swift; sourceTree = "<group>"; };
 		44B4FFCF25C4250B00F0D1CD /* ThreadsafeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsafeArray.swift; sourceTree = "<group>"; };
+		44B4FFD725C561E400F0D1CD /* UISearchBar + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar + Extension.swift"; sourceTree = "<group>"; };
+		44B4FFE525C56E6000F0D1CD /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		44D41BE425C2BC1300EB6487 /* SourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceView.swift; sourceTree = "<group>"; };
 		44D41BEA25C2FA1500EB6487 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
 		44D41BF225C2FA7800EB6487 /* SourceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceBuilder.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 				44B4FFCF25C4250B00F0D1CD /* ThreadsafeArray.swift */,
 				44289B1B25BEFF4400EC8782 /* UIHelper.swift */,
 				44956F9A25C101C9005B53DC /* UILabel + Extension.swift */,
+				44B4FFD725C561E400F0D1CD /* UISearchBar + Extension.swift */,
 				449B872925C277BD00E0F27F /* UINavigationBar + Extension.swift */,
 				449B873625C27D5A00E0F27F /* UINavigationController + Extension.swift */,
 				44956FCB25C13894005B53DC /* String + Extension.swift */,
@@ -338,6 +343,7 @@
 			children = (
 				44FB0F6625BFC95D0027B4FC /* SettingsBuilder.swift */,
 				449B874025C29C1900E0F27F /* Cells */,
+				44B4FFE525C56E6000F0D1CD /* SwipeTableViewController.swift */,
 				44FB0F3325BFBC720027B4FC /* SettingsViewController.swift */,
 				44FB0F5225BFC0980027B4FC /* SettingsPresenter.swift */,
 				44FB0F5725BFC0D70027B4FC /* SettingsInteractor.swift */,
@@ -619,6 +625,7 @@
 			files = (
 				44289B7325BF042100EC8782 /* NetworkManager.swift in Sources */,
 				44289B1225BEFE1D00EC8782 /* Constants.swift in Sources */,
+				44B4FFE625C56E6000F0D1CD /* SwipeTableViewController.swift in Sources */,
 				44289B3D25BF001F00EC8782 /* ListInteractor.swift in Sources */,
 				44956FA525C104E0005B53DC /* UIStackView + Extension.swift in Sources */,
 				44FB0F3425BFBC720027B4FC /* SettingsViewController.swift in Sources */,
@@ -627,6 +634,7 @@
 				44289B0525BEFD1300EC8782 /* ListViewController.swift in Sources */,
 				44289B5225BF00A400EC8782 /* DetailsBuilder.swift in Sources */,
 				449B873C25C29C1200E0F27F /* SourceCell.swift in Sources */,
+				44B4FFD825C561E400F0D1CD /* UISearchBar + Extension.swift in Sources */,
 				44289B4D25BF006100EC8782 /* ListRouter.swift in Sources */,
 				449B873725C27D5A00E0F27F /* UINavigationController + Extension.swift in Sources */,
 				44289B2F25BEFFE600EC8782 /* NewsCell.swift in Sources */,

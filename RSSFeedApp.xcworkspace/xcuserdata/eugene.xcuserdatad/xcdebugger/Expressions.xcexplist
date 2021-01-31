@@ -3,12 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "SourceStorageManager.createSource():StorageManager.swift">
-      </ContextState>
-      <ContextState
-         contextName = "SettingsViewController.loadSources():SettingsViewController.swift">
-      </ContextState>
-      <ContextState
          contextName = "ListViewController.reusableCell():ListViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -17,49 +11,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #2 in NetworkManager.fetchFeed(forUrls:completion:):NetworkManager.swift">
-      </ContextState>
-      <ContextState
-         contextName = "SettingsBuilder.build():SettingsBuilder.swift">
-      </ContextState>
-      <ContextState
-         contextName = "SourceView.fillSource():SourceView.swift">
-      </ContextState>
-      <ContextState
-         contextName = "SourceViewController.saveData():SourceViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "presenter">
-            </PersistentString>
-            <PersistentString
-               value = "viewModel">
-            </PersistentString>
-            <PersistentString
-               value = "interactor">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "SourceInteractor.saveSource(with:):SourceInteractor.swift">
          <PersistentStrings>
             <PersistentString
                value = "storageManager">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SourcePresenter.saveSource(with:):SourcePresenter.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "interactor">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in SourceStorageManager.loadSources(sources:completionHandler:):StorageManager.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self?.context.fetch(RssSource.fetchRequest()) as! [RssSource]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -78,13 +33,151 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in NetworkManager.fetchFeed(forUrls:completion:):NetworkManager.swift">
+         contextName = "SourceCell.configure(with:):SourceCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewModel.source.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in SourceStorageManager.loadSources(sources:searchTerm:completionHandler:):StorageManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sources[0].title">
+            </PersistentString>
+            <PersistentString
+               value = "try privateContext?.fetch(RssSource.fetchRequest())">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SettingsBuilder.build():SettingsBuilder.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SourceViewController.saveData():SourceViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "presenter">
+            </PersistentString>
+            <PersistentString
+               value = "viewModel">
+            </PersistentString>
+            <PersistentString
+               value = "interactor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SourcePresenter.saveSource(with:):SourcePresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "interactor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SettingsViewController.loadSources():SettingsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SettingsInteractor.loadSources():SettingsInteractor.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SettingsPresenter.deleteData(viewModel:completionHandler:):SettingsPresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewModel.source.title">
+            </PersistentString>
+            <PersistentString
+               value = "viewModel.title">
+            </PersistentString>
+            <PersistentString
+               value = "viewModel.source.url">
+            </PersistentString>
+            <PersistentString
+               value = "viewModel.source">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "closure #1 in ListInteractor.fetchFeed():ListInteractor.swift">
          <PersistentStrings>
             <PersistentString
                value = "feedUrls">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in SourceStorageManager.loadSources(sources:completionHandler:):StorageManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self?.context.fetch(RssSource.fetchRequest()) as! [RssSource]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SettingsPresenter.presentData(with:):SettingsPresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sources[0].title">
+            </PersistentString>
+            <PersistentString
+               value = "sourceViewModels[0].source.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SourceViewModel.init(source:):SettingsModels.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "source.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SourceView.fillSource():SourceView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in SettingsInteractor.loadSources():SettingsInteractor.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sources[0].title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in NetworkManager.fetchFeed(forUrls:completion:):NetworkManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in NetworkManager.fetchFeed(forUrls:completion:):NetworkManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in SettingsPresenter.presentData(with:):SettingsPresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "$0.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SourceStorageManager.deleteSource(source:completionHandler:):StorageManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "source.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SourceStorageManager.createSource():StorageManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SettingsViewController.updateModel(at:):SettingsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.viewModel.sources[indexPath.row].title">
+            </PersistentString>
+            <PersistentString
+               value = "self.viewModel.sources[indexPath.row].source.title">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -100,7 +193,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SettingsInteractor.loadSources():SettingsInteractor.swift">
+         contextName = "SettingsViewController.tableView(_:cellForRowAt:):SettingsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.viewModel.sources[indexPath.row].source.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SettingsViewController.displayData(with:):SettingsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.viewModel.sources[0].source.title">
+            </PersistentString>
+            <PersistentString
+               value = "sources[0].source.title">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

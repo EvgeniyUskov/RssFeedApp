@@ -18,6 +18,8 @@ public class SettingsBuilder {
         let interactor = SettingsInteractor(presenter: presenter, storageManager: storageManager)
         let router = SettingsRouter(viewController: settingsViewController)
         
+        presenter.interactor = interactor
+        
         settingsViewController.presenter = presenter
         settingsViewController.interactor = interactor
         settingsViewController.router = router

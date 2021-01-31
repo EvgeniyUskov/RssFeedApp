@@ -52,6 +52,7 @@ enum Constants {
         
         static let rightBarButtonItemText = "Назад"
         static let saveButtonText = "Добавить"
+        static let editButtonText = "Изменить"
         
         static let isActiveText = "Активный"
         static let sourceTitleText = "Имя:"
@@ -62,6 +63,7 @@ enum Constants {
         
         static let wrongUrl = "Введите корректный URL адрес"
         static let wrongRss = "По этим адресам нет RSS рассылки"
-            static let modelName = "NewsSources"
+        static let modelName = "NewsSources"
+        static let sourcesPlaceHolder = "Источник"
     }
 }

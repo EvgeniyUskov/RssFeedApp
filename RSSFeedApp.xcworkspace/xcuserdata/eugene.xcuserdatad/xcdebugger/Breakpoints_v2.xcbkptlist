@@ -5,97 +5,24 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
-            uuid = "B0554A9B-C28C-4304-97E3-398465766AF5"
-            shouldBeEnabled = "No"
+            uuid = "ED2DE973-B08F-4250-90A9-E8A6E294D093"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Source/SourceBuilder.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "build(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "550F09AF-B1DF-4702-8346-8AA19B3C3637"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Source/SourcePresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "presentData(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1B34A7B3-5790-4CCA-812B-576B45E4BDFD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Source/Views/SourceView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "saveSource()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "72643F03-956E-4C73-A984-7EB0E267A650"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Managers/StorageManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "loadSources(sources:completionHandler:)"
-            landmarkType = "7">
+            symbolName = "UIViewAlertForUnsatisfiableConstraints"
+            moduleName = "">
             <Locations>
                <Location
-                  uuid = "72643F03-956E-4C73-A984-7EB0E267A650 - 7388245a816a683c"
+                  uuid = "ED2DE973-B08F-4250-90A9-E8A6E294D093 - ba3ad5676a792f38"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in RSSFeedApp.SourceStorageManager.loadSources(sources: RSSFeedApp.LoadMode, completionHandler: (Swift.Array&lt;RSSFeedApp.RssSource&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "RSSFeedApp"
+                  symbolName = "UIViewAlertForUnsatisfiableConstraints"
+                  moduleName = "UIKitCore"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Managers/StorageManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "1189">
-               </Location>
-               <Location
-                  uuid = "72643F03-956E-4C73-A984-7EB0E267A650 - 7388245a816a683c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in RSSFeedApp.SourceStorageManager.loadSources(sources: RSSFeedApp.LoadMode, completionHandler: (Swift.Array&lt;RSSFeedApp.RssSource&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "RSSFeedApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Managers/StorageManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "1292">
+                  offsetFromSymbolStart = "0">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -103,110 +30,46 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C9515FE8-D0B1-45F3-B2A2-7121FD1ECD9C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Managers/StorageManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "loadSources(sources:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EFCC774F-A0B7-4EB5-834D-1C3922621C76"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Source/Views/SourceView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
-            landmarkName = "fillSource()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "940AB5D8-DABA-4E6C-B664-0337765B41DC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Source/SourceInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "saveSource(with:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D746877D-30DC-4133-9705-009319BF8104"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Managers/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "fetchFeed(forUrls:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5200BEEB-F534-4695-AFE6-DC9F1AC2EF7A"
+            uuid = "76548C30-550B-4D91-9786-72D1996FC550"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Source/SourcePresenter.swift"
+            filePath = "RSSFeedApp/Screens/Settings/SettingsPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "saveSource(with:completionHandler:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "deleteData(viewModel:completionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "5200BEEB-F534-4695-AFE6-DC9F1AC2EF7A - 5fc364def1e67696"
+                  uuid = "76548C30-550B-4D91-9786-72D1996FC550 - 65cf0bcd3ad17de4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RSSFeedApp.SourcePresenter.saveSource(with: RSSFeedApp.SourceViewModel, completionHandler: () -&gt; ()) -&gt; ()"
+                  symbolName = "RSSFeedApp.SettingsPresenter.deleteData(viewModel: RSSFeedApp.SourceViewModel, completionHandler: () -&gt; ()) -&gt; ()"
                   moduleName = "RSSFeedApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Source/SourcePresenter.swift"
+                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Settings/SettingsPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "164">
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "131">
                </Location>
                <Location
-                  uuid = "5200BEEB-F534-4695-AFE6-DC9F1AC2EF7A - ad0b0c9db00b978b"
+                  uuid = "76548C30-550B-4D91-9786-72D1996FC550 - ca42d944c5710ee6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in RSSFeedApp.SourcePresenter.saveSource(with: RSSFeedApp.SourceViewModel, completionHandler: () -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 () -&gt; () in RSSFeedApp.SettingsPresenter.deleteData(viewModel: RSSFeedApp.SourceViewModel, completionHandler: () -&gt; ()) -&gt; ()"
                   moduleName = "RSSFeedApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Source/SourcePresenter.swift"
+                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Settings/SettingsPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
                   offsetFromSymbolStart = "29">
                </Location>
             </Locations>
@@ -215,68 +78,68 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "91CAD4C0-741C-4683-B89D-CF53AC2E5A95"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Managers/StorageManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "loadSources(sources:completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8D5E2D7A-69C0-4623-9AF3-CF06683E7F09"
+            uuid = "7F52E7E0-5232-4804-AC24-1B329994B821"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Settings/SettingsViewController.swift"
+            filePath = "RSSFeedApp/Screens/Settings/SettingsInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "didAddNewSource()"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "deleteData(source:completionHandler:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7F52E7E0-5232-4804-AC24-1B329994B821 - d3c4cfe93dc5a67"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RSSFeedApp.SettingsInteractor.deleteData(source: RSSFeedApp.RssSource, completionHandler: () -&gt; ()) -&gt; ()"
+                  moduleName = "RSSFeedApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Settings/SettingsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "7F52E7E0-5232-4804-AC24-1B329994B821 - fb916c546b6d8eaf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in RSSFeedApp.SettingsInteractor.deleteData(source: RSSFeedApp.RssSource, completionHandler: () -&gt; ()) -&gt; ()"
+                  moduleName = "RSSFeedApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Settings/SettingsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DDB69457-AC3B-41FA-A1EE-C41980507B45"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Settings/SettingsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "loadSources()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "197BC086-56FF-490B-97C2-D30005239904"
+            uuid = "5FC9F52A-2C2B-48A8-B434-82A6A71E53BF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RSSFeedApp/Screens/Settings/SettingsInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "loadSources()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "197BC086-56FF-490B-97C2-D30005239904 - b4c599f27fd75752"
+                  uuid = "5FC9F52A-2C2B-48A8-B434-82A6A71E53BF - b4c599f27fd75503"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -286,12 +149,12 @@
                   urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Settings/SettingsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
                   offsetFromSymbolStart = "44">
                </Location>
                <Location
-                  uuid = "197BC086-56FF-490B-97C2-D30005239904 - 6f8a08d44b00213c"
+                  uuid = "5FC9F52A-2C2B-48A8-B434-82A6A71E53BF - 6f8a08d44b00236b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -301,9 +164,9 @@
                   urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Settings/SettingsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "84">
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "83">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -311,144 +174,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8F0FBAEE-360B-42B7-A5F3-302CBFB876D9"
-            shouldBeEnabled = "Yes"
+            uuid = "FF06FB92-1562-49D3-84CD-C68171A4F08E"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Managers/StorageManager.swift"
+            filePath = "RSSFeedApp/Screens/Settings/SettingsPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "saveSources(completionHandler:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "presentData(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5398631F-EAB0-4640-B5F9-873860C272F2"
-            shouldBeEnabled = "Yes"
+            uuid = "6EC7ACA5-5A00-4CDD-A1F1-D326D70B97AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSFeedApp/Screens/Settings/SettingsModels.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init(source:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DF09388-B83B-442A-8B49-4490CBC66C10"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSFeedApp/Screens/Source/Views/SourceView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "configure(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "455F012A-A3CA-4CA5-A687-BF7CC83E2F6C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSFeedApp/Screens/Source/Views/SourceView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "configure(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE8F3F43-F9E7-4A2D-BF70-7B706F68EA70"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSFeedApp/Screens/Settings/Cells/SourceCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "configure(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E01A1FC3-2588-435E-A2BD-A3F3A9FF3547"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RSSFeedApp/Screens/Settings/SettingsInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "saveSources()"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "loadSources()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5398631F-EAB0-4640-B5F9-873860C272F2 - af8b57ccb33425a9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RSSFeedApp.SettingsInteractor.saveSources() -&gt; ()"
-                  moduleName = "RSSFeedApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Settings/SettingsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "5398631F-EAB0-4640-B5F9-873860C272F2 - 84a019fcf4d45fbd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in RSSFeedApp.SettingsInteractor.saveSources() -&gt; ()"
-                  moduleName = "RSSFeedApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Settings/SettingsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0B4E72EC-2B31-46EA-9CF5-6E1D34964F2A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Source/SourceViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "saveData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0B4E72EC-2B31-46EA-9CF5-6E1D34964F2A - 3d115336ce2e9be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RSSFeedApp.SourceViewController.saveData() -&gt; ()"
-                  moduleName = "RSSFeedApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Source/SourceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "143">
-               </Location>
-               <Location
-                  uuid = "0B4E72EC-2B31-46EA-9CF5-6E1D34964F2A - eac808faa8398c6b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in RSSFeedApp.SourceViewController.saveData() -&gt; ()"
-                  moduleName = "RSSFeedApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/eugene/Downloads/05%20-%20Xcode%20projects/RSSFeedApp/RSSFeedApp/Screens/Source/SourceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "123">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "29AC2F4F-8D74-4B9C-839B-AFECE1488714"
+            uuid = "D1FC8A15-BAEB-49BC-BC5E-E68AA5774913"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Source/SourceViewController.swift"
+            filePath = "RSSFeedApp/Screens/List/ListInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "saveData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "15F2F229-D0E1-4457-8276-BFD5C1877AFD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSSFeedApp/Screens/Source/SourceViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "saveData()"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "fetchFeed()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

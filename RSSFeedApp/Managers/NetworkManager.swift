@@ -42,8 +42,7 @@ extension NetworkManager: NetworkManagerProtocol {
                     guard let items = rssFeed?.items else {return}
                     feedItems.append(contentsOf: items)
                     
-                case .failure(let error):
-                    print(error)
+                case .failure( _):
                     errorUrls.append(url)
                 }
             }

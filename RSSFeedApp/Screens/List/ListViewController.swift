@@ -26,7 +26,6 @@ public class ListViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshRSSFeed(sender:)), for: .valueChanged)
         refreshControl.tintColor = Constants.Colors.textColor
-        //refreshControl.attributedTitle = NSAttributedString(string: "Обновляем вашу ленту...", attributes: nil)
         return refreshControl
     }()
     

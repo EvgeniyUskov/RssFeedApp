@@ -29,11 +29,11 @@ class SettingsInteractorTests: XCTestCase {
         override func tearDownWithError() throws {
         }
         
-        public func testInteractorLoadNews() throws {
+        public func testInteractorLoadSources() throws {
             interactor?.loadSources(completionHandler: {
                 [weak self] in
-                XCTAssertNotNil(self?.presenter?.sourceViewModels, "No news received")
-                XCTAssertEqual(self?.presenter?.sourceViewModels?.count, 5, "Wrong number of newss received")
+                XCTAssertNotNil(self?.presenter?.sourceViewModels, "No sources received")
+                XCTAssertEqual(self?.presenter?.sourceViewModels?.count, 5, "Wrong number of sources received")
                 XCTAssertEqual(self?.presenter?.sourceViewModels?[0].title, "Foo 1")
                 XCTAssertEqual(self?.presenter?.sourceViewModels?[0].url, "https://www.foobar.com/rss1")
             })

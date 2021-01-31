@@ -31,7 +31,7 @@ import XCTest
         override func tearDownWithError() throws {
         }
 
-        func testPresentData() throws {
+        func testPresenterPresentData() throws {
             interactor?.fetchFeed()
             
             XCTAssertNotNil(listViewController?.viewModel.news, "No news received")

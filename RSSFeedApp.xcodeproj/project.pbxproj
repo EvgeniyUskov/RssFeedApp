@@ -244,10 +244,10 @@
 		44289AE425BEFC9600EC8782 /* RSSFeedAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				4465BEA125C6E7B5000BFECB /* Source Tests */,
-				4465BE8025C6CADC000BFECB /* Settings Tests */,
-				4465BE3B25C6B6F2000BFECB /* Details Tests */,
 				4465BE3A25C6B6E6000BFECB /* List Tests */,
+				4465BE3B25C6B6F2000BFECB /* Details Tests */,
+				4465BE8025C6CADC000BFECB /* Settings Tests */,
+				4465BEA125C6E7B5000BFECB /* Source Tests */,
 				44B4002425C69EA300F0D1CD /* Stubs */,
 				44289AE725BEFC9600EC8782 /* Info.plist */,
 			);
@@ -270,10 +270,10 @@
 			isa = PBXGroup;
 			children = (
 				449B872E25C2796E00E0F27F /* LoadingView.swift */,
-				44D41BE925C2F9EC00EB6487 /* Source */,
-				44FB0F3225BFBC520027B4FC /* Settings */,
 				44289B2325BEFF9000EC8782 /* List */,
 				44289B2725BEFF9700EC8782 /* Details */,
+				44FB0F3225BFBC520027B4FC /* Settings */,
+				44D41BE925C2F9EC00EB6487 /* Source */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -406,10 +406,10 @@
 		448F6C8125C6AC8400BFAC6F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				4465BE9225C6E2A1000BFECB /* Source */,
-				4465BE2125C6B5C2000BFECB /* Details */,
 				4431CE7525C6A20200F6B6EA /* List */,
+				4465BE2125C6B5C2000BFECB /* Details */,
 				4465BE6125C6C2D5000BFECB /* Settings */,
+				4465BE9225C6E2A1000BFECB /* Source */,
 			);
 			path = Screens;
 			sourceTree = "<group>";

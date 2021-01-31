@@ -33,12 +33,3 @@ extension SettingsViewControllerStub: SettingsViewControllerProtocol {
         self.viewModel.sources = sources
     }
 }
-
-//MARK: ListViewControllerRoutingProtocol implementation protocols
-//extension ListViewControllerStub: SettingsViewControllerRoutingProtocol {
-//    public func showSettings(with settingsViewController: SettingsViewController) {
-//    }
-//    
-//    public func showDetails(with detailsViewController: DetailsViewController) {
-//    }
-//}

@@ -81,7 +81,7 @@ extension SettingsViewController {
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let switchView: UISwitch = UISwitch(frame: .zero)
         switchView.setOn(false, animated: true)
-        switchView.tag = indexPath.row // for detect which row switch Changed
+        switchView.tag = indexPath.row
         switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath) as! SourceCell

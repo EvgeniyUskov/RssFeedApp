@@ -33,7 +33,7 @@ class ListInteractorTests: XCTestCase {
         interactor?.fetchFeed()
         
         XCTAssertNotNil(presenter?.news, "No news received")
-        XCTAssertEqual(presenter?.news?.count, 5, "Wrong number of newss received")
+        XCTAssertEqual(presenter?.news?.count, 5, "Wrong number of news received")
         XCTAssertEqual(presenter?.news?[0].title, "Foo 1")
         XCTAssertEqual(presenter?.news?[0].text, "Bar 1")
     }

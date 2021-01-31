@@ -107,7 +107,6 @@ extension SourceStorageManager: SourceStorageProtocol {
         
     public func saveSources(completionHandler: @escaping () -> () ) {
         do {
-//            let privateContext = container.newBackgroundContext()
             try privateContext.save()
             completionHandler()
         } catch {
@@ -118,7 +117,6 @@ extension SourceStorageManager: SourceStorageProtocol {
     //MARK: Delete
     public func deleteSource(source: RssSource, completionHandler: @escaping () -> () ) {
         privateContext.delete(source)
-//        sources.remove(at: indexPath.row)
         saveSources(completionHandler: {
                         completionHandler()
         })

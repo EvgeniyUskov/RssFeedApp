@@ -15,9 +15,9 @@ enum Constants {
         static let viewedColor = UIColor(named: "ViewedColor")
         
         static let messageTextColor = UIColor.lightGray
-        
         static let dialogBackgroundColor = UIColor.lightGray
     }
+    
     enum Fonts {
         static let messageTitleFont = UIFont.systemFont(ofSize: 13, weight: .regular)
         static let messageSubtitleFont = UIFont.systemFont(ofSize: 10, weight: .light)

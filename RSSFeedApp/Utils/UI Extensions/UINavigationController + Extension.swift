@@ -16,8 +16,6 @@ extension UINavigationController {
         transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
         pushViewController(viewController, animated: false)
-        //present(viewController, animated: false, completion: nil)
-//        self.show(viewController, animated: false, sender: self)
     }
     
     public func popFromLeft() {
@@ -28,7 +26,5 @@ extension UINavigationController {
             transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
             view.window!.layer.add(transition, forKey: kCATransition)
         popViewController(animated: false)
-//            present(viewController, animated: false, completion: nil)
-//            self.show(viewController, animated: false, sender: self)
     }
 }

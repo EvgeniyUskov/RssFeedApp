@@ -25,6 +25,9 @@ public class SettingsViewController: SwipeTableViewController {
     
     //MARK: Views
     let searchController = UISearchController(searchResultsController: nil)
+    lazy var loadingView: LoadingView = {
+        return LoadingView()
+    }()
     
     //MARK: Properties
     var presenter: SettingsPresenterProtocol?
@@ -45,19 +48,18 @@ public class SettingsViewController: SwipeTableViewController {
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadingView.showLoading()
         loadSources()
     }
     
+    //MARK: updateModel implementation
     public override func updateModel(at indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        
         presenter?.deleteData(viewModel: self.viewModel.sources[indexPath.row], completionHandler: {
             [weak self] in
             self?.viewModel.sources.remove(at: indexPath.row)
             DispatchQueue.main.async {
                 [weak self] in
-                    
                 self?.tableView.reloadData()
             }
         })
@@ -66,16 +68,13 @@ public class SettingsViewController: SwipeTableViewController {
 
 //MARK: UITableViewDelegate UITableViewDataSource methods
 extension SettingsViewController {
-    public override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if viewModel.sources.count == 0 {
             self.tableView.setEmptyView(title: Constants.Stuff.noSourcesTitleMessage, message: Constants.Stuff.noSourcesSubtitleMessage)
         } else {
             self.tableView.restore()
         }
-        
         return viewModel.sources.count
     }
     
@@ -86,7 +85,6 @@ extension SettingsViewController {
         switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath) as! SourceCell
-//        reusableCell(forIndexPath: indexPath)
         cell.configure(with: self.viewModel.sources[indexPath.row])
         switchView.setOn(viewModel.sources[indexPath.row].checked, animated: true)
         cell.accessoryView = switchView
@@ -112,7 +110,8 @@ extension SettingsViewController {
 extension SettingsViewController: SettingsViewControllerProtocol {
     public func displayData(with sources: [SourceViewModel]) {
         self.viewModel.sources = sources
-            self.tableView.reloadData()
+        self.tableView.reloadData()
+        loadingView.hideLoading()
     }
 }
 
@@ -129,6 +128,7 @@ extension SettingsViewController: SettingsUpdatingDelegate {
     }
 }
 
+//MARK: SearchBarDeegate Implementation
 extension SettingsViewController: UISearchBarDelegate {
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchTerm: String) {
         timer?.invalidate()
@@ -140,7 +140,15 @@ extension SettingsViewController: UISearchBarDelegate {
 
 //MARK: Additional methods
 extension SettingsViewController {
+    private func loadSources() {
+        interactor?.loadSources(completionHandler: {})
+    }
+
+    private func showEditSourceDetailsView(for viewModel: SourceViewModel) {
+        router?.navigateToSourceDetails(with: viewModel)
+    }
     
+    //MARK: Action methods
     @objc
     private func closeSettings() {
         navigationController?.popFromLeft()
@@ -158,15 +166,7 @@ extension SettingsViewController {
         interactor?.saveSources()
     }
     
-    private func showEditSourceDetailsView(for viewModel: SourceViewModel) {
-        router?.navigateToSourceDetails(with: viewModel)
-    }
-    
     //MARK: Setup
-    private func loadSources() {
-        interactor?.loadSources()
-    }
-    
     private func setupNavigationBar() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus")?.withRenderingMode(.alwaysTemplate) , style: .plain, target: self, action: #selector(showAddSourceDetailsView))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: Constants.Stuff.rightBarButtonItemText, style: .plain, target: self, action: #selector(closeSettings) )
@@ -174,6 +174,7 @@ extension SettingsViewController {
     
     private func setupTableView() {
         tableView.register(SourceCell.self, forCellReuseIdentifier: Constants.Ids.settingsCellReuseId)
+        tableView.backgroundColor = Constants.Colors.backgroundColor
     }
     
     private func setupSearchBar() {

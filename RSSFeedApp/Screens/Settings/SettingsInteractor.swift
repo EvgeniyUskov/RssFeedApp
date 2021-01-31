@@ -9,7 +9,7 @@ import UIKit
 
 //MARK: Protocols
 public protocol SettingsInteractorProtocol {
-    func loadSources()
+    func loadSources(completionHandler: @escaping () -> ())
     func saveSources()
     
     func showSources(with searchTerm: String)
@@ -46,15 +46,16 @@ extension SettingsInteractor: SettingsInteractorProtocol {
         })
     }
     
-    public func loadSources() {
+    public func loadSources(completionHandler: @escaping () -> ()) {
         storageManager?.loadSources(sources: .allSources, searchTerm: nil, completionHandler: {
             [weak self]
             (sources) in
             DispatchQueue.main.async {
                 [weak self] in
-            if !sources.isEmpty {
-                self?.presenter?.presentData(with: sources)
-            }
+                if !sources.isEmpty {
+                    self?.presenter?.presentData(with: sources)
+                }
+                completionHandler()
             }
         })
     }

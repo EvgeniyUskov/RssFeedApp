@@ -21,12 +21,6 @@ public class DetailsPresenter {
         self.viewController = viewController
     }
     
-//    private func makeAttributedString(fromString html: String) {
-//        let data = Data(html.utf8)
-//        if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
-//            yourLabel.attributedText = attributedString
-//        }
-//    }
 }
 
 //MARK: DetailsPresenterProtocol Implementation

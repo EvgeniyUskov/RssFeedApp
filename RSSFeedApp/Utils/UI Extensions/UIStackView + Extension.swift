@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIStackView {
+    
     static func makeVerticalStackView(views: [UIView]) -> UIStackView {
         let view = UIStackView(arrangedSubviews: views)
         view.translatesAutoresizingMaskIntoConstraints = false

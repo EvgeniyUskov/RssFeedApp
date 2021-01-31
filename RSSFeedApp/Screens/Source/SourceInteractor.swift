@@ -15,20 +15,23 @@ public protocol SourceInteractorProtocol {
 
 //MARK: SourceInteractor
 public class SourceInteractor {
+    
+    //MARK: Properties
     weak var presenter: SourcePresenterProtocol?
     var storageManager: SourceStorageProtocol?
     
+    //MARK: Init
     public init(presenter: SourcePresenterProtocol, storageManager: SourceStorageProtocol) {
         self.presenter = presenter
         self.storageManager = storageManager
     }
     
+    //MARK: Additional methods
     public func createRssSource() {
         if let rssSource = storageManager?.createSource() {
             presenter?.presentData(with: rssSource)
         }
     }
-    
 }
 
 //MARK: SourceInteractorProtocol implementation
@@ -37,6 +40,5 @@ extension SourceInteractor: SourceInteractorProtocol {
         storageManager?.addSource(with: source, completionHandler: {
             completionHandler()
         })
-        
     }
 }

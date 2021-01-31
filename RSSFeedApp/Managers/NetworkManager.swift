@@ -10,22 +10,13 @@ import FeedKit
 
 //MARK: Protocols
 public protocol NetworkManagerProtocol {
-    func fetchFeed(forUrls urls: Set<URL>, completion: @escaping (ThreadsafeArray<RSSFeedItem>, ThreadsafeArray<URL>) -> () )
+    func fetchFeed(forUrls urls: Set<URL>, completionHandler: @escaping (ThreadsafeArray<RSSFeedItem>, ThreadsafeArray<URL>) -> () )
 }
 
 //MARK: NetworkManager
-public class NetworkManager {
-    //MARK: Properties
+public class NetworkManager: NetworkManagerProtocol {
     
-    //MARK: Init methods
-    public init() {
-    }
-    
-}
-
-//MARK: NetworkManagerProtocol Implementation methods
-extension NetworkManager: NetworkManagerProtocol {
-    public func fetchFeed(forUrls urls: Set<URL>, completion: @escaping (ThreadsafeArray<RSSFeedItem>, ThreadsafeArray<URL>) -> () ) {
+    public func fetchFeed(forUrls urls: Set<URL>, completionHandler: @escaping (ThreadsafeArray<RSSFeedItem>, ThreadsafeArray<URL>) -> () ) {
         let feedItems = ThreadsafeArray<RSSFeedItem>()
         let errorUrls = ThreadsafeArray<URL>()
         let feedFetchersWorkGroup = DispatchGroup()
@@ -41,7 +32,6 @@ extension NetworkManager: NetworkManagerProtocol {
                     let rssFeed = feed.rssFeed
                     guard let items = rssFeed?.items else {return}
                     feedItems.append(contentsOf: items)
-                    
                 case .failure( _):
                     errorUrls.append(url)
                 }
@@ -49,7 +39,7 @@ extension NetworkManager: NetworkManagerProtocol {
         }
         
         feedFetchersWorkGroup.notify(queue: DispatchQueue.main) {
-            completion(feedItems, errorUrls)
+            completionHandler(feedItems, errorUrls)
         }
     }
 }

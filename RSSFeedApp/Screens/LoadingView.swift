@@ -51,7 +51,6 @@ public class LoadingView: UIView {
         UIView.animate(withDuration: 0.25, animations: {
             self.overlay.alpha = 1
         })
-        
     }
     
     public func hideLoading() {

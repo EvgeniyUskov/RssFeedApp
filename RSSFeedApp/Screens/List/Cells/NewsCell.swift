@@ -32,6 +32,7 @@ public class NewsCell: UITableViewCell {
         super.prepareForReuse()
     }
     
+    //MARK: Setup
     private func setupView() {
         backgroundColor = Constants.Colors.backgroundColor
         selectionStyle = .none
@@ -44,10 +45,10 @@ public class NewsCell: UITableViewCell {
             stackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 20),
             stackView.heightAnchor.constraint(equalToConstant: 64),
             
-           // titleLabel.width(to: stackView, multiplier: 0.95)
         ])
     }
-    
+
+    //MARK: Configure
     public func configure(with viewModel: NewsViewModel) {
         titleLabel.text = viewModel.title
         dateLabel.text = viewModel.pubDate?.toString()

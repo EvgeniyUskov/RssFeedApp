@@ -10,7 +10,7 @@ import SwipeCellKit
 
 class SourceCell: SwipeTableViewCell {
 
-    //MARK: Properties
+    //MARK: Views
     lazy var titleLabel = UILabel.makeNewsTitleLabel()
     lazy var urlLabel = UILabel.makeNewsDateLabel()
     lazy var globalStackView = UIStackView.makeVerticalStackView(views: [titleLabel,
@@ -26,14 +26,11 @@ class SourceCell: SwipeTableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     public override func prepareForReuse() {
         super.prepareForReuse()
     }
     
+    //MARK: setup
     private func setupView() {
         backgroundColor = Constants.Colors.backgroundColor
         selectionStyle = .none
@@ -43,18 +40,17 @@ class SourceCell: SwipeTableViewCell {
             globalStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             globalStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 10),
             
-//            globalStackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 20),
             globalStackView.heightAnchor.constraint(equalToConstant: 64),
-                                        
-           // titleLabel.width(to: stackView, multiplier: 0.95)
         ])
     }
     
+    //MARK: configure
     public func configure(with viewModel: SourceViewModel) {
-        titleLabel.text = viewModel.source.title//TODO: delete source
-        urlLabel.text = viewModel.source.url
+        titleLabel.text = viewModel.title
+        urlLabel.text = viewModel.url
     }
-
+    
+    //MARK: Additional methods
     public func markAsViewed() {
         titleLabel.textColor = Constants.Colors.viewedColor
     }

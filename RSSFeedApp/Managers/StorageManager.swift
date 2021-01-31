@@ -17,11 +17,14 @@ public enum LoadMode {
 
 //MARK: Protocols
 public protocol SourceStorageProtocol {
-    func saveSources(completionHandler: @escaping () -> () )
+    func createSource() -> RssSource
+    
     func loadSources(sources mode: LoadMode, searchTerm: String?, completionHandler: @escaping (([RssSource]) -> ()))
     func loadSources(with searchTerm: String, completionHandler: @escaping (([RssSource]) -> ()))
-    func createSource() -> RssSource
+   
+    func saveSources(completionHandler: @escaping () -> () )
     func addSource(with source: RssSource, completionHandler: @escaping () -> () )
+    
     func deleteSource(source: RssSource, completionHandler: @escaping () -> () )
 }
 
@@ -29,46 +32,19 @@ public protocol SourceStorageProtocol {
 public class SourceStorageManager{
     
     //MARK: Properties
-//    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     private let container = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     private lazy var privateContext = container.newBackgroundContext()
 }
 
-//MARK: HistoryStorageProtocol Implementation methods
+//MARK: SourceStorageProtocol Implementation methods
 extension SourceStorageManager: SourceStorageProtocol {
-    
+    //MARK: Create
     public func createSource() -> RssSource {
             let newSource = RssSource(context: privateContext)
             return newSource
     }
     
-    public func addSource( with source: RssSource, completionHandler: @escaping () -> () ) {
-        DispatchQueue.global(qos: .utility).async {
-            [weak self] in
-            self?.saveSources(completionHandler:{
-                completionHandler()
-            } )
-        }
-    }
-        
-    public func deleteSource(source: RssSource, completionHandler: @escaping () -> () ) {
-        privateContext.delete(source)
-//        sources.remove(at: indexPath.row)
-        saveSources(completionHandler: {
-                        completionHandler()
-        })
-    }
-    
-    public func saveSources(completionHandler: @escaping () -> () ) {
-        do {
-//            let privateContext = container.newBackgroundContext()
-            try privateContext.save()
-            completionHandler()
-        } catch {
-            print("Error saving context \(error)")
-        }
-    }
-    
+    //MARK: Load
     public func loadSources(with searchTerm: String, completionHandler: @escaping (([RssSource]) -> ())) {
         if !searchTerm.isEmpty {
             loadSources(sources: .containsSpecificText, searchTerm: searchTerm, completionHandler: {
@@ -87,7 +63,6 @@ extension SourceStorageManager: SourceStorageProtocol {
         DispatchQueue.global(qos: .utility).async {
             [weak self] in
             do {
-//                let privateContext = self?.container.newBackgroundContext()
                 var sources: [RssSource]?
                 
                 switch mode {
@@ -119,5 +94,35 @@ extension SourceStorageManager: SourceStorageProtocol {
             }
         }
     }
+    
+    //MARK: Save
+    public func addSource( with source: RssSource, completionHandler: @escaping () -> () ) {
+        DispatchQueue.global(qos: .utility).async {
+            [weak self] in
+            self?.saveSources(completionHandler:{
+                completionHandler()
+            } )
+        }
+    }
+        
+    public func saveSources(completionHandler: @escaping () -> () ) {
+        do {
+//            let privateContext = container.newBackgroundContext()
+            try privateContext.save()
+            completionHandler()
+        } catch {
+            print("Error saving context \(error)")
+        }
+    }
+    
+    //MARK: Delete
+    public func deleteSource(source: RssSource, completionHandler: @escaping () -> () ) {
+        privateContext.delete(source)
+//        sources.remove(at: indexPath.row)
+        saveSources(completionHandler: {
+                        completionHandler()
+        })
+    }
+    
 
 }

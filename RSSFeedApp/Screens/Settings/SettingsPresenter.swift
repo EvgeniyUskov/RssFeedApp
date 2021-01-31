@@ -25,6 +25,7 @@ public class SettingsPresenter {
     }
 }
 
+//MARK: SettingsPresenterProtocol Implementation
 extension SettingsPresenter: SettingsPresenterProtocol {
     public func deleteData(viewModel: SourceViewModel, completionHandler: @escaping () -> () ) {
         interactor?.deleteData(source: viewModel.source, completionHandler: {

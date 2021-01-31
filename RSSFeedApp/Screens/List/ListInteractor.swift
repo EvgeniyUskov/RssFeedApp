@@ -23,7 +23,7 @@ public class ListInteractor {
     var feedUrls = Set<URL>()
     
     //MARK: Init
-    public init(presenter: ListPresenter?, storageManager: SourceStorageProtocol, networkManager: NetworkManagerProtocol) {
+    public init(presenter: ListPresenterProtocol?, storageManager: SourceStorageProtocol, networkManager: NetworkManagerProtocol) {
         self.presenter = presenter
         self.storageManager = storageManager
         self.networkManager = networkManager
@@ -42,7 +42,7 @@ extension ListInteractor: ListInteractorProtocol {
             })
             
             if let feedUrls = self?.feedUrls {
-                self?.networkManager?.fetchFeed(forUrls: feedUrls, completion: {
+                self?.networkManager?.fetchFeed(forUrls: feedUrls, completionHandler: {
                     [weak self]
                     items, errorUrls in
                     self?.presenter?.presentData(with: items.array)

@@ -43,12 +43,12 @@ public class SourceViewController: UIViewController {
         super.viewDidLoad()
         setup()
         if let viewModel = viewModel {
-//            configure(with: viewModel)
             sourceView.configure(with: viewModel)
         }
     }
 }
 
+//MARK: SourceViewControllerProtocol Implementation
 extension SourceViewController: SourceViewControllerProtocol {
     public func displayData(with viewModel: SourceViewModel) {
         sourceView.configure(with: viewModel)
@@ -60,6 +60,7 @@ extension SourceViewController: SourceViewControllerRoutingProtocol {
     
 }
 
+//MARK: SourceViewControllerViewingProtocol implementation
 extension SourceViewController: SourceViewControllerViewingProtocol {
     public func saveData() {
         guard let viewModel = viewModel else { return }
@@ -74,15 +75,12 @@ extension SourceViewController: SourceViewControllerViewingProtocol {
 }
 
 extension SourceViewController {
+    
+    //MARK: setup
     private func setup() {
         sourceView.viewController = self
         view.addSubview(sourceView)
         sourceView.edgesToSuperview()
     }
     
-//    private func configure(with viewModel: SourceViewModel) {
-//        sourceView.titleTextField.text = viewModel.title
-//        sourceView.urlTextField.text = viewModel.url
-//        sourceView.switcher.isOn = viewModel.checked
-//    }
 }

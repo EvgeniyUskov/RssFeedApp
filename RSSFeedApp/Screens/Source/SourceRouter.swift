@@ -14,8 +14,11 @@ public protocol SourceRouterProtocol {
 }
 
 public class SourceRouter: SourceRouterProtocol {
+    
+    //MARK: Properties
     weak var viewController: SourceViewControllerRoutingProtocol?
     
+    //MARK: Init
     public init (viewController: SourceViewControllerRoutingProtocol) {
         self.viewController = viewController
     }

@@ -8,13 +8,14 @@
 import UIKit
 
 public class UIHelper {
+    //MARK: TabBar
     public static func setupTabBarUI() {
         UITabBar.appearance().tintColor = Constants.Colors.textColor
         UITabBar.appearance().barTintColor = Constants.Colors.backgroundColor
     }
     
+    //MARK: NavBar
     public static func setupNavigationBarUI() -> UINavigationBarAppearance {
-        
         guard let titleColor = Constants.Colors.textColor else {return UINavigationBarAppearance()}
         
         let navBarAppearance = UINavigationBarAppearance()
@@ -29,7 +30,8 @@ public class UIHelper {
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.navigationBar.largeTitleTextAttributes = [.foregroundColor: textColor]
     }
-
+    
+    //MARK: SearchBar
     public static func setupSearchBarUI(searchBar: UISearchBar) {
         searchBar.barTintColor = Constants.Colors.backgroundColor
         searchBar.tintColor = Constants.Colors.textColor

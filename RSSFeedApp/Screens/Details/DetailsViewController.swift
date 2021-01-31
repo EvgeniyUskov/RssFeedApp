@@ -34,6 +34,7 @@ public class DetailsViewController: UIViewController {
     
     var viewModel: DetailsViewModel
     
+    //MARK: Init
     public init(detailsViewModel: DetailsViewModel) {
         self.viewModel = detailsViewModel
         super.init(nibName: nil, bundle: nil)
@@ -43,12 +44,14 @@ public class DetailsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: View lifecycle
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         configureView(with: viewModel)
     }
     
+    //MARK: setup
     private func setupView() {
         scrollView.delegate = self
         
@@ -68,6 +71,7 @@ public class DetailsViewController: UIViewController {
         scrollView.edgesToSuperview()
     }
     
+    //MARK: configure
     private func configureView(with viewModel: DetailsViewModel) {
         self.titleLabel.text = viewModel.title
         self.dateLabel.text = viewModel.pubDate?.toString()

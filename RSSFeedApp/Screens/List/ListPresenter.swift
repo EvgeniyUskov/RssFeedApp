@@ -23,7 +23,6 @@ public class ListPresenter {
     public init(viewController: ListViewControllerProtocol) {
         self.viewController = viewController
     }
-    
 }
 
 //MARK: ListPresenterProtocol Implementation
@@ -31,7 +30,6 @@ extension ListPresenter: ListPresenterProtocol {
     
     public func presentData(with feedItems: [RSSFeedItem]) {
         var news = [NewsViewModel]()
-        
         for item in feedItems {
             news.append(NewsViewModel(pubDate: item.pubDate, title: item.title, text: item.description))
         }

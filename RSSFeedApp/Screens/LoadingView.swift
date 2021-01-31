@@ -8,15 +8,6 @@
 import UIKit
 
 public class LoadingView: UIView {
-    //MARK: Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     //MARK: Views
     lazy var overlay: UIView = {
         let view = UIView()
@@ -27,6 +18,16 @@ public class LoadingView: UIView {
     }()
     
     var activityIndicator = UIActivityIndicatorView()
+    
+
+    //MARK: Init
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     public func showLoading() {
         guard let window = UIApplication.shared.windows.first else { return}

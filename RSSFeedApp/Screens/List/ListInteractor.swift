@@ -27,7 +27,6 @@ public class ListInteractor {
         self.presenter = presenter
         self.storageManager = storageManager
         self.networkManager = networkManager
-        
     }
 }
 

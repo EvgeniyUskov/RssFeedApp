@@ -15,7 +15,6 @@ public protocol NetworkManagerProtocol {
 
 //MARK: NetworkManager
 public class NetworkManager: NetworkManagerProtocol {
-    
     public func fetchFeed(forUrls urls: Set<URL>, completionHandler: @escaping (ThreadsafeArray<RSSFeedItem>, ThreadsafeArray<URL>) -> () ) {
         let feedItems = ThreadsafeArray<RSSFeedItem>()
         let errorUrls = ThreadsafeArray<URL>()
@@ -24,7 +23,6 @@ public class NetworkManager: NetworkManagerProtocol {
         for url in urls {
             DispatchQueue.global(qos: .default).async(group: feedFetchersWorkGroup) {
                 let parser = FeedParser(URL: url)
-                
                 let result = parser.parse()
                 
                 switch result {

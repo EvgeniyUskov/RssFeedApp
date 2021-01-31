@@ -43,6 +43,7 @@ public class ListViewController: UITableViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        UIHelper.setupTabBarUI()
         setupNavigationBar()
         setupTableView()
         fetchFeed()
@@ -51,7 +52,6 @@ public class ListViewController: UITableViewController {
     public override func viewWillAppear(_ animated: Bool) {
         fetchFeed()
     }
-    
 }
 
 // MARK: - Table View Delegate Data Source implementation methods
@@ -157,5 +157,4 @@ extension ListViewController {
         loadingView.showLoading()
         interactor?.fetchFeed()
     }
-    
 }

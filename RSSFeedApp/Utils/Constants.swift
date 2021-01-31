@@ -33,11 +33,6 @@ enum Constants {
     enum Ids {
         static let newsCellReuseId = "newsCell"
         static let settingsCellReuseId = "settingsCell"
-        static let trackCellReuseId = "trackCell"
-        static let historyCellReuseId = "historyCell"
-    }
-    
-    enum Urls {
     }
     
     enum Stuff {
@@ -53,7 +48,7 @@ enum Constants {
         static let rightBarButtonItemText = "Назад"
         static let saveButtonText = "Добавить"
         static let editButtonText = "Изменить"
-        
+        static let deleteText = "Удалить"
         static let isActiveText = "Активный"
         static let sourceTitleText = "Имя:"
         static let urlTitleText = "URL:"

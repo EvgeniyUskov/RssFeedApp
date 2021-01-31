@@ -42,6 +42,7 @@ class SourceCell: SwipeTableViewCell {
             
             globalStackView.heightAnchor.constraint(equalToConstant: 64),
         ])
+        urlLabel.width(250)
     }
     
     //MARK: configure

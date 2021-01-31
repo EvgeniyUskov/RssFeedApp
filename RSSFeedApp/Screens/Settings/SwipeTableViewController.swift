@@ -28,6 +28,7 @@ public class SwipeTableViewController: UITableViewController, SwipeTableViewCell
         let deleteAction = SwipeAction(style: .destructive, title: Constants.Stuff.deleteText) { action, indexPath in
             self.updateModel(at: indexPath)
         }
+        
         return [deleteAction]
     }
     

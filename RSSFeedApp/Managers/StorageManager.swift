@@ -34,7 +34,6 @@ public class SourceStorageManager{
     //MARK: Properties
     private let container = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     private lazy var privateContext = container.newBackgroundContext()
-    let queue = DispatchQueue(label: "com.eugene.uskov.coreDataQueue", qos: .utility)
 }
 
 //MARK: SourceStorageProtocol Implementation methods
@@ -61,8 +60,7 @@ extension SourceStorageManager: SourceStorageProtocol {
     }
     
     public func loadSources(sources mode: LoadMode, searchTerm: String? = nil, completionHandler: @escaping (([RssSource]) -> ())) {
-        //DispatchQueue.global(qos: .utility).async {
-        queue.async {
+        DispatchQueue.global(qos: .utility).async {
             [weak self] in
             do {
                 var sources: [RssSource]?
@@ -99,8 +97,7 @@ extension SourceStorageManager: SourceStorageProtocol {
     
     //MARK: Save
     public func addSource( with source: RssSource, completionHandler: @escaping () -> () ) {
-//        DispatchQueue.global(qos: .utility).async {
-        queue.async {
+        DispatchQueue.global(qos: .utility).async {
             [weak self] in
             self?.saveSources(completionHandler:{
                 completionHandler()

@@ -28,6 +28,7 @@ class SourceView: UIView {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = Constants.Stuff.titlePlaceholderText
+        textField.autocapitalizationType = .none
         return textField
     }()
     lazy var sourceTitleStackView: UIStackView = {
@@ -54,6 +55,7 @@ class SourceView: UIView {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = Constants.Stuff.urlPlaceholderText
+        textField.autocapitalizationType = .none
         return textField
     }()
     lazy var sourceUrlStackView: UIStackView = {

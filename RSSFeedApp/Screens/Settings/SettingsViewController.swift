@@ -141,7 +141,7 @@ extension SettingsViewController: UISearchBarDelegate {
 //MARK: Additional methods
 extension SettingsViewController {
     private func loadSources() {
-        interactor?.loadSources(completionHandler: {})
+        interactor?.loadSources()
     }
 
     private func showEditSourceDetailsView(for viewModel: SourceViewModel) {

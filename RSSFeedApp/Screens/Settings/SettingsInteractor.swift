@@ -46,7 +46,7 @@ extension SettingsInteractor: SettingsInteractorProtocol {
         })
     }
     
-    public func loadSources(completionHandler: @escaping () -> ()) {
+    public func loadSources(completionHandler: @escaping () -> () = {} ) {
         storageManager?.loadSources(sources: .allSources, searchTerm: nil, completionHandler: {
             [weak self]
             (sources) in

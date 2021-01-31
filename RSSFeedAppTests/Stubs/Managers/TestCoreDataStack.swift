@@ -7,11 +7,11 @@
 
 import Foundation
 import CoreData
+@testable import RSSFeedApp
 
 class TestCoreDataStack {
-    public let modelName = "NewsSources"
     public lazy var model: NSManagedObjectModel = {
-        let modelURL = Bundle.main.url(forResource: modelName, withExtension: "momd")!
+        let modelURL = Bundle.main.url(forResource: Constants.Stuff.modelName, withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelURL)!
     }()
     
@@ -20,7 +20,7 @@ class TestCoreDataStack {
         persistentStoreDescription.type = NSInMemoryStoreType
         
         let container = NSPersistentContainer(
-            name: modelName,
+            name: Constants.Stuff.modelName,
             managedObjectModel: model)
         
         container.persistentStoreDescriptions = [persistentStoreDescription]
@@ -39,7 +39,7 @@ class TestCoreDataStack {
     }()
     
     public lazy var storeContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: modelName, managedObjectModel: model)
+        let container = NSPersistentContainer(name: Constants.Stuff.modelName, managedObjectModel: model)
         container.loadPersistentStores { _, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

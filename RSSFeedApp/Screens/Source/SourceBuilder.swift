@@ -13,7 +13,7 @@ public class SourceBuilder {
         
         let sourceViewController = SourceViewController()
         sourceViewController.delegate = settingsUpdateDelegate
-        let storageManager = SourceStorageManager()
+        let storageManager = (UIApplication.shared.delegate as! AppDelegate).storageManager
         
         let presenter = SourcePresenter(viewController: sourceViewController)
         let interactor = SourceInteractor(presenter: presenter, storageManager: storageManager)

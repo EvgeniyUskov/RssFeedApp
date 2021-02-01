@@ -10,7 +10,12 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    lazy var storageManager : SourceStorageManager = {
+        let storageManager = SourceStorageManager()
+        return storageManager
+    }()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return true
     }

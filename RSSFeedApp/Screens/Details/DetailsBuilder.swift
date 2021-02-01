@@ -12,7 +12,7 @@ public class DetailsBuilder {
         let detailsViewModel = DetailsViewModel(newsViewModel: newsViewModel)
         let detailsViewController = DetailsViewController(detailsViewModel: detailsViewModel)
         
-        let storageManager = SourceStorageManager()
+        let storageManager = (UIApplication.shared.delegate as! AppDelegate).storageManager
         
         let presenter = DetailsPresenter(viewController: detailsViewController)
         let interactor = DetailsInteractor(presenter: presenter, storageManager: storageManager)

@@ -16,8 +16,4 @@ target 'RSSFeedApp' do
     # Pods for testing
   end
 
-  target 'RSSFeedAppUITests' do
-    # Pods for testing
-  end
-
 end

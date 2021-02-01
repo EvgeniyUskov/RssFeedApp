@@ -11,7 +11,7 @@ public class ListBuilder {
     public func build() -> ListViewController {
         let listViewController = ListViewController()
         
-        let storageManager = SourceStorageManager()
+        let storageManager = (UIApplication.shared.delegate as! AppDelegate).storageManager
         let networkManager = NetworkManager()
         
         let presenter = ListPresenter(viewController: listViewController)

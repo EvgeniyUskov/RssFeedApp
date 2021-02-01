@@ -33,11 +33,7 @@ public class SourceStorageManager{
     
     //MARK: Properties
     private let container = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
-    private var privateContext: NSManagedObjectContext
-    
-    init() {
-        privateContext = container.newBackgroundContext()
-    }
+    private lazy var privateContext = container.newBackgroundContext()
 }
 
 //MARK: SourceStorageProtocol Implementation methods

@@ -13,7 +13,7 @@ jobs:
       - run: pod install # Install CocoaPods dependencies
     
   build:
-    macos:
+    ios:
       xcode: 12.4
 
     steps:

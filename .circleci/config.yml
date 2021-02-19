@@ -35,7 +35,7 @@ jobs:
           destination: scan-output
      
 workflows:
-  version: 2
+  version: 2.1
   build-and-run-tets:
     jobs:
       - build

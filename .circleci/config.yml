@@ -6,7 +6,7 @@ version: 2.1
 jobs:
   fetch-pods:
     macos:
-      xcode: 12.4
+      xcode: 11.3.0
 
     steps:
       - checkout
@@ -14,7 +14,7 @@ jobs:
     
   build:
     macos:
-      xcode: 12.4
+      xcode: 11.3.0
 
     steps:
       - checkout

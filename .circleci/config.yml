@@ -4,8 +4,15 @@
 version: 2.1
 
 jobs:
-  build:
+  fetch-pods:
+    macos:
+      xcode: 12.4
 
+    steps:
+      - checkout
+      - run: pod install # Install CocoaPods dependencies
+    
+  build:
     macos:
       xcode: 12.4
 
@@ -14,7 +21,7 @@ jobs:
       - run: pod install # Install CocoaPods dependencies
       - run: 
           name: build and run tests
-          command: fastlane scan # Run tests using Fastlane
+          command: fastlane scan
           environment:
             SCAN_DEVICE: iPhone 8
             SCAN_SCHEME: RSSFeedApp
@@ -31,4 +38,4 @@ workflows:
   version: 2
   build-and-run-tets:
     jobs:
-      build
+      - build

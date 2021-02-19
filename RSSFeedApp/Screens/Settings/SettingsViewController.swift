@@ -43,7 +43,6 @@ public class SettingsViewController: SwipeTableViewController {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
-        setupSearchBar()
     }
     
     public override func viewWillAppear(_ animated: Bool) {

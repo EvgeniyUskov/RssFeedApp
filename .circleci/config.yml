@@ -5,7 +5,7 @@ version: 2.1
 
 jobs:
   fetch-pods:
-    ios:
+    macos:
       xcode: 12.4
 
     steps:
@@ -13,7 +13,7 @@ jobs:
       - run: pod install # Install CocoaPods dependencies
     
   build:
-    ios:
+    macos:
       xcode: 12.4
 
     steps:

@@ -13,11 +13,11 @@ jobs:
       - checkout
       - run: pod install # Install CocoaPods dependencies
       - run: 
-        name: build and run tests
-        command: fastlane scan # Run tests using Fastlane
-        environment:
-          SCAN_DEVICE: iPhone 8
-          SCAN_SCHEME: RSSFeedApp
+          name: build and run tests
+          command: fastlane scan # Run tests using Fastlane
+          environment:
+            SCAN_DEVICE: iPhone 8
+            SCAN_SCHEME: RSSFeedApp
 
       # Collect XML test results data to show in the UI, and save the same XML
       # files under test-results folder in the Artifacts tab

@@ -180,13 +180,6 @@ extension SettingsViewController {
         tableView.backgroundColor = Constants.Colors.backgroundColor
     }
     
-    private func setupSearchBar() {
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = true
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = Constants.Stuff.sourcesPlaceHolder
-        UIHelper.setupSearchBarUI(searchBar: searchController.searchBar)
-    }
+    
 }
 
